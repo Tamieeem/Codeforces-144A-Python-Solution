@@ -1,0 +1,22 @@
+n=int(input())
+sol=list(map(int, input().split()))
+max=sol[0]
+min=sol[0]
+mxidx=0
+minidx=0
+for i in range(len(sol)):
+    if sol[i]>max:
+        max=sol[i]
+        mxidx=i
+    elif sol[i]<=min:
+        min=sol[i]
+        minidx=i
+count=mxidx+((len(sol)-1)-minidx)
+#print(count)
+#print(mxidx)
+#print(minidx)
+if minidx<mxidx:
+    print(count-1)
+else:
+    print(count)
+
